@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gira Planet Music - Escuela de Música</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            background-color: #333;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Estilos para la galería de imágenes */
+        .imagen {
+            margin: 10px;
+            float: left;
+        }
+
+        .imagen img {
+            width: 300px;
+            height: 200px;
+        }
+
+        /* Estilos para la sección de profesores */
+        .profesor {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .profesor img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        section {
+            width: 80%;
+            text-align: left;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gira Planet Music</h1>
+        <img src="img.jpg.jpeg" alt="Logo de Gira Planet Music">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#galeria" onclick="mostrarSeccion('galeria')">Galería</a></li>
+            <li><a href="#profesores" onclick="mostrarSeccion('profesores')">Profesores</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <h2>Bienvenidos a Gira Planet Music</h2>
+        <p>Somos una escuela de música comprometida con el aprendizaje y la pasión por la música. ¡Únete a nosotros y descubre tu talento musical!</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="imagen">
+            <img src="so1.jpeg" alt="Imagen de la escuela">
+        </div>
+        <div class="imagen">
+            <img src="so2.jpeg" alt="Otra imagen de la escuela">
+        </div>
+        <div class="imagen">
+            <img src="so3.jpeg" alt="Otra imagen de la escuela">
+        </div>
+    </section>
+
+    <section id="profesores">
+        <h2>Nuestros Profesores</h2>
+        <div class="profesor">
+            <img src="p2.jpeg" alt="Foto del Profesor 1">
+            <h3>Profesor 1</h3>
+            <p>Profesor de violín, guitarra, piano. Licenciatura obtenida en Harvard.</p>
+        </div>
+        <div class="profesor">
+            <img src="p1.jpeg" alt="Foto del Profesor 2">
+            <h3>Profesor 2</h3>
+            <p>Profesor de batería, guitarra eléctrica. Licenciatura obtenida en Oxford.</p>
+        </div>
+    </section>
+
+    <script>
+        function mostrarSeccion(seccionId) {
+            var secciones = document.querySelectorAll('section');
+            for (var i = 0; i < secciones.length; i++) {
+                secciones[i].style.display = 'none';
+            }
+            document.getElementById(seccionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
